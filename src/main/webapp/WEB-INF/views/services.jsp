@@ -1,6 +1,8 @@
 <%@ include file="../common/header.jspf" %>
 <%@ include file="../common/navbar.jspf" %>
 
-	<P>You are Home just in time!</P>
-		
+	<div class="container">
+		<p>This is about me</p>
+		</div>
+
 <%@ include file="../common/footer.jspf"%>

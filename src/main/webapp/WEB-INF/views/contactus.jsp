@@ -1,16 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!doctype html>
-<html>
-	<head>
-		<title>Contact Us</title>
-		<%@ include file="header.jsp" %>
-	</head>
-	<body>
-		<header class="navbar-dark bg-dark">
-			<%@ include file="mynavbar.jsp" %>
-		</header>
+<%@ include file="../common/header.jspf" %>
+<%@ include file="../common/navbar.jspf" %>
+
 		<div class="container">
 			<div>
 				<h1>CONTACT US</h1>
@@ -37,7 +27,18 @@
 						<input type="tel" id="contactPhone" class="form-control" placeholder="Phone" name="contactPhone">
 					</div>
 					<div>
-						<input type="text" class="form-control" placeholder="Purpose" name="contactReason" required>
+						<span style="color:red">
+							<span class="field-validation-valid" data-valmsg-for="reasonSelected" data-valmsg-replace="true">
+							</span>
+						</span>
+						<select data-val="true" data-val-required="Please select your reason" id="reasonSelected" 
+							name="reasonSelected" style="width:100%">
+							<option value="">-Select Reason-</option>
+							<option value="BabyBlessing">Baby Blessing</option>
+							<option value="HomeBibleStudy">Home Bible Study</option>
+							<option value="Wedding">Wedding</option>
+							<option value="Funeral">Funeral</option>
+						</select>
 					</div>
 					<div>
 						<input type="text" class="form-control" placeholder="Notes" name="contactNotes">
@@ -47,7 +48,5 @@
 			</div>
 		
 		</div>
-				
-		<%@ include file="script.jsp" %>
-	</body>
-</html>
+
+<%@ include file="../common/footer.jspf"%>

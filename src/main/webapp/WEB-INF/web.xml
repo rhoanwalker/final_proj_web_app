@@ -26,6 +26,15 @@
 	</servlet-mapping>	
 	
 	<servlet>
+    	<servlet-name>covertest</servlet-name>
+    	<jsp-file>/WEB-INF/views/covertest.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>covertest</servlet-name>
+	    <url-pattern>/covertest/*</url-pattern>   
+	</servlet-mapping>
+	
+	<servlet>
     	<servlet-name>contact</servlet-name>
     	<jsp-file>/WEB-INF/views/contactus.jsp</jsp-file>
 	</servlet>
